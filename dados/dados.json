@@ -1,17 +1,28 @@
 {
   "titulo": "Junta de Freguesia de Mirandela",
-  "subtitulo": "Concelho de Mirandela",
+  "subtitulo": "Cidade Jardim de Trás-os-Montes",
   "menu": [
     {"nome": "Início", "link": "index.html"},
-    {"nome": "História", "link": "historia.html"}
+    {"nome": "História", "link": "historia.html"},
+    {"nome": "Notícias", "link": "#"},
+    {"nome": "Serviços", "link": "#"},
+    {"nome": "Contactos", "link": "#"}
   ],
-  "home": {
-    "titulo": "Bem-vindo à Cidade Jardim",
-    "descricao": "Mirandela, banhada pelo rio Tua, é um pólo de desenvolvimento e cultura na região de Trás-os-Montes. Explore o nosso site para conhecer o executivo e os nossos serviços."
+  "presidente": {
+    "nome": "Luís Carlos de Fontoura Soares",
+    "foto": "https://www.jf-mirandela.pt/wp-content/uploads/2021/11/presidente.jpg"
   },
-  "historia": {
-    "titulo": "História de Mirandela",
-    "conteudo": "A fundação de Mirandela remonta a tempos imemoriais, tendo recebido o seu primeiro foral em 1250 pelas mãos de D. Afonso III."
-  },
-  "rodape": "© 2026 Junta de Freguesia de Mirandela - Todos os direitos reservados"
+  "noticias": [
+    {
+      "titulo": "Iluminações de Natal",
+      "data": "Dezembro 2025",
+      "resumo": "As ruas de Mirandela brilham com a magia da época natalícia."
+    },
+    {
+      "titulo": "Mercado Municipal",
+      "data": "Janeiro 2026",
+      "resumo": "Novas bancas e melhorias no atendimento ao público."
+    }
+  ],
+  "rodape": "Praça do Município, 5370-288 Mirandela | Telefone: 278 200 200"
 }

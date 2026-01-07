@@ -2,38 +2,69 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{titulo}}</title>
     <style>
-        /* Estilo para parecer o site oficial */
-        body { font-family: sans-serif; margin: 0; line-height: 1.6; color: #333; }
-        header { background-color: #006837; color: white; padding: 40px 20px; text-align: center; }
-        nav { background: #f4f4f4; padding: 15px; text-align: center; border-bottom: 3px solid #f9da00; }
-        nav a { margin: 0 15px; text-decoration: none; color: #006837; font-weight: bold; }
-        main { max-width: 900px; margin: 20px auto; padding: 20px; }
-        footer { background: #333; color: white; text-align: center; padding: 20px; margin-top: 40px; }
-        .foto-principal { width: 100%; border-radius: 8px; }
+        :root { --verde: #006837; --amarelo: #f9da00; --cinza: #f4f4f4; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #fff; color: #333; }
+        
+        /* Topo Moderno */
+        header { background: var(--verde); color: white; padding: 60px 20px; text-align: center; }
+        nav { sticky: top; background: white; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-bottom: 4px solid var(--amarelo); }
+        nav a { margin: 0 15px; text-decoration: none; color: var(--verde); font-weight: bold; transition: 0.3s; }
+        nav a:hover { color: orange; }
+
+        .container { max-width: 1100px; margin: 40px auto; display: grid; grid-template-columns: 3fr 1fr; gap: 30px; padding: 0 20px; }
+
+        /* Secção de Notícias (Cards) */
+        .noticia-card { background: var(--cinza); border-radius: 10px; padding: 20px; margin-bottom: 20px; border-left: 5px solid var(--verde); }
+        .noticia-card h3 { margin-top: 0; color: var(--verde); }
+        .data { font-size: 0.8em; color: #888; }
+
+        /* Barra Lateral */
+        .sidebar { background: var(--verde); color: white; padding: 25px; border-radius: 10px; text-align: center; }
+        .sidebar img { width: 100%; border-radius: 5px; margin-bottom: 15px; border: 3px solid var(--amarelo); }
+
+        footer { background: #222; color: white; padding: 40px; text-align: center; margin-top: 60px; }
     </style>
 </head>
 <body>
-    <nav>
-        {{#menu}}
-            <a href="{{link}}">{{nome}}</a>
-        {{/menu}}
-    </nav>
 
-    <header>
-        <h1>{{titulo}}</h1>
-        <p>{{subtitulo}}</p>
-    </header>
+<nav>
+    {{#menu}} <a href="{{link}}">{{nome}}</a> {{/menu}}
+</nav>
 
+<header>
+    <h1>{{titulo}}</h1>
+    <p>{{subtitulo}}</p>
+</header>
+
+<div class="container">
     <main>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Mirandela_tua.jpg/1200px-Mirandela_tua.jpg" class="foto-principal">
-        <h2>{{home.titulo}}</h2>
-        <p>{{home.descricao}}</p>
+        <h2>Últimas Notícias</h2>
+        {{#noticias}}
+        <div class="noticia-card">
+            <span class="data">{{data}}</span>
+            <h3>{{titulo}}</h3>
+            <p>{{resumo}}</p>
+            <button style="background: var(--verde); color: white; border: none; padding: 8px 15px; border-radius: 5px;">Ler mais</button>
+        </div>
+        {{/noticias}}
     </main>
 
-    <footer>
-        <p>{{rodape}}</p>
-    </footer>
+    <aside>
+        <div class="sidebar">
+            <h3>Executivo</h3>
+            <img src="{{presidente.foto}}" alt="Presidente">
+            <p><strong>{{presidente.nome}}</strong></p>
+            <p>Presidente da Junta</p>
+        </div>
+    </aside>
+</div>
+
+<footer>
+    <p>{{rodape}}</p>
+</footer>
+
 </body>
 </html>
