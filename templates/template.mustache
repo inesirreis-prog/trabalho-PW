@@ -3,25 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>{{titulo}}</title>
+    <style>
+        /* Estilo para parecer o site oficial */
+        body { font-family: sans-serif; margin: 0; line-height: 1.6; color: #333; }
+        header { background-color: #006837; color: white; padding: 40px 20px; text-align: center; }
+        nav { background: #f4f4f4; padding: 15px; text-align: center; border-bottom: 3px solid #f9da00; }
+        nav a { margin: 0 15px; text-decoration: none; color: #006837; font-weight: bold; }
+        main { max-width: 900px; margin: 20px auto; padding: 20px; }
+        footer { background: #333; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+        .foto-principal { width: 100%; border-radius: 8px; }
+    </style>
 </head>
 <body>
     <nav>
         {{#menu}}
-            <a href="{{link}}"> [{{nome}}] </a>
+            <a href="{{link}}">{{nome}}</a>
         {{/menu}}
     </nav>
-    <hr>
 
     <header>
         <h1>{{titulo}}</h1>
-        <h3>{{home.titulo}}</h3>
+        <p>{{subtitulo}}</p>
     </header>
 
     <main>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Mirandela_tua.jpg/1200px-Mirandela_tua.jpg" class="foto-principal">
+        <h2>{{home.titulo}}</h2>
         <p>{{home.descricao}}</p>
     </main>
 
-    <hr>
-    <footer>{{rodape}}</footer>
+    <footer>
+        <p>{{rodape}}</p>
+    </footer>
 </body>
 </html>

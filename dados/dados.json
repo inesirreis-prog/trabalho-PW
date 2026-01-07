@@ -1,16 +1,17 @@
 {
   "titulo": "Junta de Freguesia de Mirandela",
+  "subtitulo": "Concelho de Mirandela",
   "menu": [
     {"nome": "Início", "link": "index.html"},
     {"nome": "História", "link": "historia.html"}
   ],
   "home": {
     "titulo": "Bem-vindo à Cidade Jardim",
-    "descricao": "Aqui encontra todas as informações sobre a nossa freguesia."
+    "descricao": "Mirandela, banhada pelo rio Tua, é um pólo de desenvolvimento e cultura na região de Trás-os-Montes. Explore o nosso site para conhecer o executivo e os nossos serviços."
   },
   "historia": {
-    "titulo": "A Nossa História",
-    "conteudo": "Mirandela recebeu foral de D. Afonso III em 25 de Maio de 1250. É conhecida pela sua ponte medieval sobre o rio Tua."
+    "titulo": "História de Mirandela",
+    "conteudo": "A fundação de Mirandela remonta a tempos imemoriais, tendo recebido o seu primeiro foral em 1250 pelas mãos de D. Afonso III."
   },
-  "rodape": "2026 - Junta de Freguesia de Mirandela"
+  "rodape": "© 2026 Junta de Freguesia de Mirandela - Todos os direitos reservados"
 }
