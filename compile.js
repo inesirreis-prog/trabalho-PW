@@ -1,26 +1,17 @@
 const fs = require('fs');
 const mustache = require('mustache');
 
-const view = {
-  nome: "Inês",
-  data: new Date().toLocaleDateString()
-};
+// 1. Ler o ficheiro de DADOS (a informacao)
+const dadosRaw = fs.readFileSync('dados.json', 'utf8');
+const dados = JSON.parse(dadosRaw);
 
-const template = `
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Site da {{nome}}</title>
-</head>
-<body>
-  <h1>Olá! Eu sou a {{nome}}.</h1>
-  <p>Este site foi gerado automaticamente em: {{data}}</p>
-  <p>O Mustache funcionou!</p>
-</body>
-</html>
-`;
+// 2. Ler o ficheiro de TEMPLATE (o visual)
+const template = fs.readFileSync('template.mustache', 'utf8');
 
-const output = mustache.render(template, view);
+// 3. Juntar os dois com o Mustache
+const output = mustache.render(template, dados);
+
+// 4. Escrever o resultado no ficheiro final
 fs.writeFileSync('index.html', output);
-console.log("Feito! O ficheiro index.html foi criado.");
+
+console.log("Sucesso: O site foi gerado a partir dos ficheiros separados.");
