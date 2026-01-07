@@ -1,0 +1,16 @@
+{
+  "titulo": "Junta de Freguesia de Mirandela",
+  "menu": [
+    {"nome": "Início", "link": "index.html"},
+    {"nome": "História", "link": "historia.html"}
+  ],
+  "home": {
+    "titulo": "Bem-vindo à Cidade Jardim",
+    "descricao": "Aqui encontra todas as informações sobre a nossa freguesia."
+  },
+  "historia": {
+    "titulo": "A Nossa História",
+    "conteudo": "Mirandela recebeu foral de D. Afonso III em 25 de Maio de 1250. É conhecida pela sua ponte medieval sobre o rio Tua."
+  },
+  "rodape": "2026 - Junta de Freguesia de Mirandela"
+}

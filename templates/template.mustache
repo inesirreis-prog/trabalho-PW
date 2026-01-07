@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>{{titulo}}</title>
+</head>
+<body>
+    <nav>
+        {{#menu}}
+            <a href="{{link}}"> [{{nome}}] </a>
+        {{/menu}}
+    </nav>
+    <hr>
+
+    <header>
+        <h1>{{titulo}}</h1>
+        <h3>{{home.titulo}}</h3>
+    </header>
+
+    <main>
+        <p>{{home.descricao}}</p>
+    </main>
+
+    <hr>
+    <footer>{{rodape}}</footer>
+</body>
+</html>

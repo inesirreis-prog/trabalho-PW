@@ -1,17 +1,20 @@
 const fs = require('fs');
 const mustache = require('mustache');
 
-// 1. Ler o ficheiro de DADOS (a informacao)
-const dadosRaw = fs.readFileSync('dados.json', 'utf8');
+// 1. Ler os dados da pasta 'dados'
+const dadosRaw = fs.readFileSync('dados/dados.json', 'utf8');
 const dados = JSON.parse(dadosRaw);
 
-// 2. Ler o ficheiro de TEMPLATE (o visual)
-const template = fs.readFileSync('template.mustache', 'utf8');
+// 2. Ler os templates da pasta 'templates'
+const templateIndex = fs.readFileSync('templates/template.mustache', 'utf8');
+const templateHistoria = fs.readFileSync('templates/historia.mustache', 'utf8');
 
-// 3. Juntar os dois com o Mustache
-const output = mustache.render(template, dados);
+// 3. Gerar a Pagina Principal (index.html)
+const htmlIndex = mustache.render(templateIndex, dados);
+fs.writeFileSync('index.html', htmlIndex);
 
-// 4. Escrever o resultado no ficheiro final
-fs.writeFileSync('index.html', output);
+// 4. Gerar a Pagina de Historia (historia.html)
+const htmlHistoria = mustache.render(templateHistoria, dados);
+fs.writeFileSync('historia.html', htmlHistoria);
 
-console.log("Sucesso: O site foi gerado a partir dos ficheiros separados.");
+console.log("Feito! O ficheiro index.html e historia.html foram criados.");
