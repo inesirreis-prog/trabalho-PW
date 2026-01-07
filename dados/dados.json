@@ -1,28 +1,39 @@
 {
   "titulo": "Junta de Freguesia de Mirandela",
-  "subtitulo": "Cidade Jardim de Trás-os-Montes",
+  "subtitulo": "Tradição e Modernidade no Coração do Tua",
   "menu": [
     {"nome": "Início", "link": "index.html"},
     {"nome": "História", "link": "historia.html"},
-    {"nome": "Notícias", "link": "#"},
     {"nome": "Serviços", "link": "#"},
     {"nome": "Contactos", "link": "#"}
   ],
   "presidente": {
     "nome": "Luís Carlos de Fontoura Soares",
+    "cargo": "Presidente da Junta",
     "foto": "https://www.jf-mirandela.pt/wp-content/uploads/2021/11/presidente.jpg"
   },
   "noticias": [
     {
-      "titulo": "Iluminações de Natal",
-      "data": "Dezembro 2025",
-      "resumo": "As ruas de Mirandela brilham com a magia da época natalícia."
+      "titulo": "Reabilitação da Ponte Velha",
+      "data": "05 de Janeiro de 2026",
+      "resumo": "As obras de conservação da ponte românica avançam a bom ritmo para preservar o nosso património histórico."
     },
     {
-      "titulo": "Mercado Municipal",
-      "data": "Janeiro 2026",
-      "resumo": "Novas bancas e melhorias no atendimento ao público."
+      "titulo": "Feira da Alheira 2026",
+      "data": "02 de Janeiro de 2026",
+      "resumo": "O maior evento gastronómico da região está a chegar. Mirandela espera por si com o melhor da nossa terra."
+    },
+    {
+      "titulo": "Iluminações de Natal",
+      "data": "Dezembro 2025",
+      "resumo": "As ruas de Mirandela brilham com a magia da época natalícia, atraindo milhares de visitantes."
     }
   ],
-  "rodape": "Praça do Município, 5370-288 Mirandela | Telefone: 278 200 200"
+  "galeria": [
+    {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Mirandela_tua.jpg/800px-Mirandela_tua.jpg", "legenda": "Vista sobre o Rio Tua"},
+    {"url": "https://www.jf-mirandela.pt/wp-content/uploads/2021/11/ponte.jpg", "legenda": "A icónica Ponte Velha"},
+    {"url": "https://www.jf-mirandela.pt/wp-content/uploads/2021/11/jardins.jpg", "legenda": "Jardins de Mirandela"},
+    {"url": "https://www.jf-mirandela.pt/wp-content/uploads/2021/11/camara.jpg", "legenda": "Paços do Concelho"}
+  ],
+  "rodape": "2026 - Junta de Freguesia de Mirandela | Praça do Município | Telefone: 278 200 200"
 }

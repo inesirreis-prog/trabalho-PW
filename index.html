@@ -6,68 +6,95 @@
     <title>Junta de Freguesia de Mirandela</title>
     <style>
         :root { --verde: #006837; --amarelo: #f9da00; --cinza: #f4f4f4; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #fff; color: #333; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #fff; color: #333; }
         
-        /* Topo Moderno */
         header { background: var(--verde); color: white; padding: 60px 20px; text-align: center; }
-        nav { sticky: top; background: white; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-bottom: 4px solid var(--amarelo); }
-        nav a { margin: 0 15px; text-decoration: none; color: var(--verde); font-weight: bold; transition: 0.3s; }
-        nav a:hover { color: orange; }
+        header h1 { margin: 0; font-size: 2.5em; }
+        
+        nav { position: sticky; top: 0; background: white; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-bottom: 4px solid var(--amarelo); z-index: 1000; }
+        nav a { margin: 0 15px; text-decoration: none; color: var(--verde); font-weight: bold; text-transform: uppercase; font-size: 14px; }
 
-        .container { max-width: 1100px; margin: 40px auto; display: grid; grid-template-columns: 3fr 1fr; gap: 30px; padding: 0 20px; }
+        .container { max-width: 1100px; margin: 40px auto; display: grid; grid-template-columns: 2.5fr 1fr; gap: 30px; padding: 0 20px; }
 
-        /* Secção de Notícias (Cards) */
-        .noticia-card { background: var(--cinza); border-radius: 10px; padding: 20px; margin-bottom: 20px; border-left: 5px solid var(--verde); }
-        .noticia-card h3 { margin-top: 0; color: var(--verde); }
-        .data { font-size: 0.8em; color: #888; }
+        /* Notícias */
+        .seccao-titulo { border-bottom: 3px solid var(--verde); display: inline-block; margin-bottom: 20px; padding-bottom: 5px; }
+        .noticia-card { background: white; border-radius: 10px; padding: 25px; margin-bottom: 25px; box-shadow: 0 2px 15px rgba(0,0,0,0.05); border-left: 6px solid var(--verde); }
+        .noticia-card h3 { margin: 10px 0; color: var(--verde); }
+
+        /* Galeria Moderna */
+        .galeria-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 40px; }
+        .galeria-item img { width: 100%; border-radius: 8px; height: 180px; object-fit: cover; border: 1px solid #ddd; }
+        .galeria-item p { font-size: 0.8em; text-align: center; color: #666; }
 
         /* Barra Lateral */
-        .sidebar { background: var(--verde); color: white; padding: 25px; border-radius: 10px; text-align: center; }
-        .sidebar img { width: 100%; border-radius: 5px; margin-bottom: 15px; border: 3px solid var(--amarelo); }
+        .sidebar-box { background: var(--verde); color: white; padding: 25px; border-radius: 15px; text-align: center; }
+        .sidebar-box img { width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--amarelo); object-fit: cover; margin-bottom: 15px; }
 
-        footer { background: #222; color: white; padding: 40px; text-align: center; margin-top: 60px; }
+        footer { background: #222; color: #ddd; padding: 40px; text-align: center; margin-top: 60px; }
     </style>
 </head>
 <body>
 
 <nav>
-     <a href="index.html">Início</a>  <a href="historia.html">História</a>  <a href="#">Notícias</a>  <a href="#">Serviços</a>  <a href="#">Contactos</a> 
+     <a href="index.html">Início</a>  <a href="historia.html">História</a>  <a href="#">Serviços</a>  <a href="#">Contactos</a> 
 </nav>
 
 <header>
     <h1>Junta de Freguesia de Mirandela</h1>
-    <p>Cidade Jardim de Trás-os-Montes</p>
+    <p>Tradição e Modernidade no Coração do Tua</p>
 </header>
 
 <div class="container">
     <main>
-        <h2>Últimas Notícias</h2>
+        <h2 class="seccao-titulo">Atualidade</h2>
         <div class="noticia-card">
-            <span class="data">Dezembro 2025</span>
-            <h3>Iluminações de Natal</h3>
-            <p>As ruas de Mirandela brilham com a magia da época natalícia.</p>
-            <button style="background: var(--verde); color: white; border: none; padding: 8px 15px; border-radius: 5px;">Ler mais</button>
+            <span style="color: #888; font-size: 0.8em;">05 de Janeiro de 2026</span>
+            <h3>Reabilitação da Ponte Velha</h3>
+            <p>As obras de conservação da ponte românica avançam a bom ritmo para preservar o nosso património histórico.</p>
         </div>
         <div class="noticia-card">
-            <span class="data">Janeiro 2026</span>
-            <h3>Mercado Municipal</h3>
-            <p>Novas bancas e melhorias no atendimento ao público.</p>
-            <button style="background: var(--verde); color: white; border: none; padding: 8px 15px; border-radius: 5px;">Ler mais</button>
+            <span style="color: #888; font-size: 0.8em;">02 de Janeiro de 2026</span>
+            <h3>Feira da Alheira 2026</h3>
+            <p>O maior evento gastronómico da região está a chegar. Mirandela espera por si com o melhor da nossa terra.</p>
+        </div>
+        <div class="noticia-card">
+            <span style="color: #888; font-size: 0.8em;">Dezembro 2025</span>
+            <h3>Iluminações de Natal</h3>
+            <p>As ruas de Mirandela brilham com a magia da época natalícia, atraindo milhares de visitantes.</p>
+        </div>
+
+        <h2 class="seccao-titulo">Galeria de Mirandela</h2>
+        <div class="galeria-grid">
+            <div class="galeria-item">
+                <img src="https:&#x2F;&#x2F;upload.wikimedia.org&#x2F;wikipedia&#x2F;commons&#x2F;thumb&#x2F;6&#x2F;62&#x2F;Mirandela_tua.jpg&#x2F;800px-Mirandela_tua.jpg" alt="Foto de Mirandela">
+                <p>Vista sobre o Rio Tua</p>
+            </div>
+            <div class="galeria-item">
+                <img src="https:&#x2F;&#x2F;www.jf-mirandela.pt&#x2F;wp-content&#x2F;uploads&#x2F;2021&#x2F;11&#x2F;ponte.jpg" alt="Foto de Mirandela">
+                <p>A icónica Ponte Velha</p>
+            </div>
+            <div class="galeria-item">
+                <img src="https:&#x2F;&#x2F;www.jf-mirandela.pt&#x2F;wp-content&#x2F;uploads&#x2F;2021&#x2F;11&#x2F;jardins.jpg" alt="Foto de Mirandela">
+                <p>Jardins de Mirandela</p>
+            </div>
+            <div class="galeria-item">
+                <img src="https:&#x2F;&#x2F;www.jf-mirandela.pt&#x2F;wp-content&#x2F;uploads&#x2F;2021&#x2F;11&#x2F;camara.jpg" alt="Foto de Mirandela">
+                <p>Paços do Concelho</p>
+            </div>
         </div>
     </main>
 
     <aside>
-        <div class="sidebar">
-            <h3>Executivo</h3>
+        <div class="sidebar-box">
             <img src="https:&#x2F;&#x2F;www.jf-mirandela.pt&#x2F;wp-content&#x2F;uploads&#x2F;2021&#x2F;11&#x2F;presidente.jpg" alt="Presidente">
-            <p><strong>Luís Carlos de Fontoura Soares</strong></p>
+            <h3 style="margin: 0;">Luís Carlos de Fontoura Soares</h3>
             <p>Presidente da Junta</p>
         </div>
     </aside>
 </div>
 
 <footer>
-    <p>Praça do Município, 5370-288 Mirandela | Telefone: 278 200 200</p>
+    <p>2026 - Junta de Freguesia de Mirandela | Praça do Município | Telefone: 278 200 200</p>
 </footer>
 
 </body>
